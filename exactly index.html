@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishna's Words 🦚</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  font-family:Georgia,serif; color:#fff;
+  background:radial-gradient(circle at 50% 15%,#315f91 0,#142b4b 38%,#071323 100%);
+  padding:24px;
+}
+.card{
+  width:min(680px,100%); text-align:center; padding:42px 28px;
+  border:1px solid rgba(255,255,255,.25); border-radius:28px;
+  background:rgba(255,255,255,.09); backdrop-filter:blur(10px);
+  box-shadow:0 18px 60px rgba(0,0,0,.35);
+}
+.peacock{font-size:52px}
+h1{margin:8px 0 4px;font-size:36px}
+.subtitle{opacity:.85;margin-bottom:30px}
+.quote{font-size:25px;line-height:1.55;margin:28px 0}
+.note{font-size:15px;opacity:.7}
+button{
+  border:0;border-radius:999px;padding:13px 22px;font-size:16px;
+  cursor:pointer;background:#fff;color:#173252;font-weight:bold;
+}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="peacock">🦚</div>
+  <h1>Krishna's Words</h1>
+  <div class="subtitle">A little wisdom for your heart</div>
+  <div id="quote" class="quote"></div>
+  <button onclick="newQuote()">✨ Give me another</button>
+  <div class="note">Take a breath. Read slowly. Keep what brings you peace.</div>
+</main>
+<script>
+const quotes = [
+"Do your duty with a sincere heart, and let go of worry about the result.",
+"When the mind is calm, even a difficult path becomes easier to walk.",
+"Do not lose yourself in yesterday or tomorrow. Give your best to this moment.",
+"Kindness is never wasted. What you give with a pure heart has its own value.",
+"When life feels confusing, choose patience over fear and faith over doubt.",
+"You cannot control every event, but you can choose how you meet it.",
+"Keep walking with courage. A difficult chapter is not the whole story."
+];
+function newQuote(){
+  document.getElementById("quote").textContent =
+    "“" + quotes[Math.floor(Math.random()*quotes.length)] + "”";
+}
+newQuote();
+</script>
+</body>
+</html>
